@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/sunnycloud/clientlibs"/>
+    <filter root="/apps/sunnycloud/components"/>
+    <filter root="/apps/sunnycloud/i18n"/>
+    <filter root="/apps/msm/sunnycloud_blueprint" mode="merge"/>
+</workspaceFilter>
