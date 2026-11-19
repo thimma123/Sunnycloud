@@ -3,5 +3,8 @@
     <filter root="/apps/sunnycloud/clientlibs"/>
     <filter root="/apps/sunnycloud/components"/>
     <filter root="/apps/sunnycloud/i18n"/>
+    <filter root="/apps/sunnycloud/Static-Templates"/>
+    <filter root="/apps/sunnycloud/pages"/>
+
     <filter root="/apps/msm/sunnycloud_blueprint" mode="merge"/>
 </workspaceFilter>
