@@ -1,0 +1,36 @@
+<h1>This page displays Component for sightly</h1>
+
+<h1>Tilte of the Page: ${pageproperties.jcr:title}</h1>
+<h2>Dialog Property: ${properties.select}</h2>
+<h2>Title of current/Inherited Page: ${inheritedpageProperties.jcr:title}</h2>
+
+<!--Page Title: ${currentPage.jcr:title}-->
+<div data-sly-resource="${'image' @resourceType ='sunnycloud/components/image'}"></div>
+<div data-sly-resource="${'button' @resourceType ='sunnycloud/components/button'}"></div>
+<sly data-sly-test = "${properties.select == 'variation1'}">
+<sly data-sly-include = "variation1.html"></sly>
+</sly>
+<sly data-sly-test = "${properties.select == 'variation2'}">
+<sly data-sly-include = "variation2.html"></sly>
+</sly>
+
+<h2>Current Page: ${currentPage.title}</h2>
+<div style="background-color:blue">
+<ul data-sly-list.item="${currentPage.listChildren}">
+${item.title}
+</ul>
+</div>
+Current Page Path: ${currentPage.getPath}
+<div style="background-color:green">
+    <ul data-sly-list.object = ${currentPage.listChildren}>
+        <li data-sly-test = ${objectList.first}>
+            ${object.name} ::: ${object.title} ::: ${objectList.count} ::: ${objectList.index} ::: First
+        </li>
+        <li data-sly-test = ${objectList.odd}>
+            ${object.name} ::: ${object.title} ::: ${objectList.count} ::: ${objectList.index}
+        </li>
+        <li data-sly-test = ${objectList.last}>
+            ${object.name} ::: ${object.title} ::: ${objectList.count} ::: ${objectList.index} ::: Last
+        </li>
+    </ul>
+</div>
